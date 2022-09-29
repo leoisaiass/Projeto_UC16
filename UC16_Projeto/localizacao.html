@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Cafeteria,Café,Bolinho" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Brasil para todos!</title>
+  </head>
+  <body>
+    <header>
+      <a id="abrir" href="#" onclick="abrir()">&#9776;</a>
+      <h1>Brasil para todos!</h1>
+    </header>
+    <nav>
+      <a id="fechar" href="#" onclick="fechar()">&times;</a>
+      <!-- &times; -- serve para criar um link de "x" -->
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="partidos.html">Partidos</a></li>
+        <li><a href="politicos.html">Políticos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="localizacao.html">Localização</a></li>
+      </ul>
+    </nav>
+    </nav>
+    <main>
+      <hr />
+      <h2>Onde estamos</h2>
+      <hr />
+
+      <div id="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29256.57175234178!2d-46.611736950759095!3d-23.56587652443447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e82a32bef21%3A0xbad8738b635de839!2sRei%20do%20Mate!5e0!3m2!1spt-BR!2sbr!4v1649428369546!5m2!1spt-BR!2sbr"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
+    <footer>
+      <div id="endereco">
+        Rua Pedro Mariano Oliveira, 78 - São Paulo - SP - CEP: 03428-100 -
+        Telefone: 11 5682-4522
+      </div>
+
+      <div id="redes">
+        <ul>
+          <li>
+            <a href="http://www.facebook.com" target="_blank"
+              ><img
+                src="img/facebook.png"
+                alt="Acesse nossa página do facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="http://www.youtube.com" target="_blank"
+              ><img src="img/youtube.png" alt="Acesse nosso canal youtube"
+            /></a>
+          </li>
+          <li>
+            <a href="http://www.instagram.com" target="_blank"
+              ><img
+                src="img/instagram.png"
+                alt="Acesse nossa conta do instagram"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      function abrir() {
+        document.getElementsByTagName("nav")[0].style.left = "0px";
+      }
+      //[0] identifica qual "nav" que é
+
+      function fechar() {
+        document.getElementsByTagName("nav")[0].style.left = "-200px";
+      }
+    </script>
+  </body>
+</html>

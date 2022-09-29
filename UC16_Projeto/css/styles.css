@@ -1,0 +1,430 @@
+/* 
+Arquivo de CSS (Cascade Style Sheet - Folha de Estilo em Cascata é utilizado para 
+fazer a camada de formatação de um site em HTML. 
+*/
+/* 
+Vamos formatar todos os elementos presentes em uma página html usando o *(asterisco)
+e aplicar margem externa ou interna zero(0) e realizar o ajuste das caixas em html
+*/
+
+* {
+  margin: 0px; /*Margem externa das caixas*/
+  padding: 0px; /*Margem interna das caixas*/
+  box-sizing: border-box; /* Ajuste de padding das caixas sem a asoma com a largura*/
+}
+
+header {
+  height: 300px; /*Aplicar altura ao cabeçalho*/
+  background-image: url(../img/BandeiraBrasil.png); /*Aplicar imagem de fundo ao cabeçalho */
+  background-size: cover; /*Ajustar o tamanho da imagem de fundo // cover - deixa a imagem não se repetir */
+  background-position-y: -130px; /*Alterar a posicão vertical da imagem (quando negativa, ela está subindo)*/
+  padding-top: 100px;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: "Candara";
+  font-size: 30pt;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgb(73, 87, 77);
+  /* Aplicar sombra:
+       - Primeiro elemento é a posição horizontal da sombra;
+       - Segundo elemento é a posição vertical da sombra; 
+       - Terceiro elemento é o efeito esfumaçado;
+       - Quarto é a cor.
+       */
+}
+
+/* Formatação da barra de navegação */
+nav {
+  background-color: rgb(73, 87, 77);
+  padding: 10px;
+  text-align: center;
+  transition: ease 0.3s;
+}
+
+nav ul li {
+  display: inline-block; /* Dispor elementos em linha */
+  margin: 5;
+  margin-left: 10px; /*Espaçso em links*/
+  margin-right: 10px; /*Espaçso em links*/
+}
+
+nav ul li a {
+  color: whitesmoke;
+  font-family: "Arial";
+  /* font-weight: bold; */
+  text-decoration: none; /*Tirar sublinhado*/
+  font-size: 15pt;
+}
+
+main {
+  padding: 35px;
+}
+
+footer {
+  background-color: rgb(73, 87, 77);
+  display: flex; /*Permitir com que o rodapé fique com o seu conteúdo flexível*/
+  flex-direction: row; /*Dispor o conteúdo em linha*/
+  /*Ajustar o conteúdo ao centro*/
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+footer div {
+  /*border: 1px solid indianred;*/
+  margin: 10px;
+}
+
+#endereco {
+  font-family: "Arial";
+  font-size: 12pt;
+  color: whitesmoke;
+  width: 300px;
+  text-align: center;
+}
+
+#redes {
+  position: absolute;
+  right: 50px;
+}
+#redes ul {
+  list-style: none; /*Retirar as bolinhas de marcação*/
+}
+
+/*Vamos dispor as imagens das redes em linha com display inline-block*/
+#redes ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+/*Alterar comprimento e largura*/
+#redes ul li a img {
+  width: 40px;
+  height: 40px;
+}
+
+/* ======================= início de formatação home =====================*/
+h2 {
+  font-family: "Corbel";
+  font-size: 20pt;
+  text-align: center;
+  border-bottom: 1px burlywood;
+  margin: 50px;
+}
+
+main p {
+  /*Acrescentar espaço para margem*/
+  margin: 10px;
+  margin-top: 30px;
+  width: 80%;
+  /*Para alinar um objeto ao centro você pode usar margin-left & margin-right auto para os dois*/
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  font-family: "Corbel";
+  font-size: 12pt; /*Tamanho da letra*/
+  /*Espaçamento entre linhas com o comando line-height*/
+  line-height: 30px;
+}
+
+#imghome {
+  /*Alinhar imagens ao centro*/
+  text-align: center;
+}
+
+#imghome img {
+  width: 450px; /*largura da imagem*/
+  height: 350px; /*altura da imagem*/
+  border-radius: 250px; /*Arredondar os cantos das imagens*/
+  opacity: 0.7; /*Opacidade da imagem (nesse caso, 70%)*/
+  margin: 20px;
+  /* efeito de transição, isso fará com que a imagem tenha uma animação ao passar o ponteiro do mouse sobre ela */
+  transition: ease 1s;
+}
+
+#imghome img:hover {
+  opacity: 1; /*Totalmente visível*/
+  /*width: 500px; 
+  height: 500px;*/
+  transform: scale(1.2); /*Este aumenta o tamanho para 20% acima do original*/
+  transform: rotate(360deg); /*girar a imagem em 360º*/
+}
+/* ============================== Fim da Home ============================ */
+
+/* ============================== Início da história ===================== */
+
+#imghistoria {
+  text-align: center; /* Centralizar o conteúdo dessa div*/
+  width: 90%; /* Alterar a largura da caixa com imagens*/
+  /* Centralizar div que contém as imagens */
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Formatação o tamanho das imagens que estão dentro da caixa 'imghistoria' */
+#imghistoria img {
+  width: 280px;
+  height: 220px;
+  margin: 5px;
+}
+
+#videohistoria {
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#videohistoria iframe {
+  width: 360px;
+  height: 240px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* ======================= Fim da página história =============================== */
+
+/* ======================= Início dos estilos para o cardápio =================== */
+h3 {
+  text-transform: uppercase; /*  converter as letras para maiúsculas */
+  font-size: 20pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(107, 46, 24);
+  margin: 30px;
+  padding-left: 3cm;
+}
+
+#linha {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Realizar a quebra linha para os demais produtos que forem adicionados */
+  /* Alinhar o conteúdo sem tirar o 'Flex' */
+  justify-content: center;
+  align-items: center;
+}
+
+#linha #produto {
+  width: 40%;
+  margin: 10px;
+  display: flex; /* Determinar que o conteúdo do produto será flexível */
+  flex-direction: row; /* Realizar a quebra de linhas para os demais produtos, que forem adicionados */
+}
+
+#linha #produto #imgprod,
+#linha #produto #descricao {
+  width: 48%;
+  margin: 10px;
+  transition: ease 0.25s;
+}
+
+#linha #produto #imgprod img {
+  /* Fazer com que a imagem altere de tamanho de acordo com a página */
+  width: 100%;
+  height: 95%;
+  border-radius: 10px;
+  /*margin: 10px;*/
+}
+
+h4 {
+  font-family: "Corbel";
+  font-size: 20pt;
+  margin: 10px;
+}
+
+h5 {
+  font-family: "Corbel light";
+  /*font-weight: lighter; /*Retirar o negrito*/
+  margin: 10px;
+}
+
+h6 {
+  font: "Arial Black";
+  color: rgb(71, 71, 71);
+  font-size: 12pt;
+  margin: 10px;
+}
+
+#linha #produto:hover {
+  background-color: rgb(73, 87, 77);
+  color: whitesmoke;
+  cursor: pointer;
+}
+/* ====================== Fim do cardápio ======================== */
+
+/* ==================== Início do estilo do mapa ==================*/
+#mapa {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mapa iframe {
+  width: 100%;
+  height: 500px;
+}
+/* ==================== Fim do estilo do mapa ==================== */
+
+/* =================== Início do estilo contato ================== */
+main form {
+  width: 40%;
+  border: 1px solid burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  box-shadow: 5px /*X*/ 5px /*Y*/ 2px /*Efeito esfumaçado*/
+    rgba(222, 184, 135, 0.719);
+}
+
+main form input,
+main form select,
+main form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /*Aumentar o espaço entre os elementos*/
+  font-family: "Corbel Black";
+  /*border: 0px; /*Retirar a borda entre cada um*/
+  /*border-bottom: 1px solid sienna;*/
+  outline: 0px; /*remover a borda quando se clica dentro dos elementos*/
+}
+
+main form input[type="tel"],
+main form select {
+  width: 49.6%;
+}
+
+main form textarea {
+  height: 250px;
+}
+
+main form input[type="submit"] {
+  /*position: relative;*/
+  margin-left: 38%;
+  /*margin-right: auto;*/
+  width: 20%;
+  background-color: rgb(172, 126, 42);
+  color: rgb(255, 255, 255);
+  border: 0px;
+  transition: ease 0.3s;
+}
+
+main form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgb(241, 191, 125);
+  color: black;
+}
+
+/*======================== Fim do estilo contato ================== */
+
+#abrir,
+#fechar {
+  display: none; /*Não devem aparecer*/
+}
+
+/*======================== Área de responsividade ================= */
+
+/* Telas de smartphones */
+@media (min-width: 0px) and (max-width: 576px) {
+  header {
+    height: 250px;
+    background-position-y: -50px;
+    background-size: 100%;
+  }
+  h1 {
+    padding-top: 70px;
+  }
+  nav {
+    width: 200px;
+    height: 100vh; /*view port height (altura do dispositivo)*/
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    padding-top: 200px;
+  }
+  nav ul li {
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 2.5px solid rgb(59, 26, 2);
+    background-color: rgb(233, 181, 147);
+  }
+  nav ul li a {
+    font-size: 20pt;
+  }
+
+  #abrir {
+    background-color: rgb(223, 173, 138);
+    padding: 10px;
+    font-size: 20pt;
+    display: block;
+    /* Configurar o link de abrir o menu */
+    text-decoration: none; /*Remover o "underscore"*/
+    font-size: 20pt;
+    color: black;
+    /* Configurar a posição para o link ficar no canto superior esquerdo */
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.411);
+  }
+  #fechar {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 35pt;
+    color: black;
+    background-color: rgb(233, 216, 203);
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    width: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.411);
+  }
+  #imghome img {
+    width: 250px;
+    height: auto;
+  }
+
+  footer {
+    /*flex-direction: column;*/
+    display: block; /*Faz a quebra dos elementos, igual tijolos*/
+    text-align: center;
+    padding: 10px;
+  }
+  #redes {
+    position: relative;
+    right: auto;
+  }
+  #endereco,
+  #redes {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #imghistoria {
+    padding-top: 50px;
+  }
+  #imghistoria img {
+    width: 90%;
+    height: auto;
+  }
+  #linha {
+    flex-direction: column;
+  }
+  #linha #produto {
+    width: 100%;
+    flex-direction: column;
+  }
+  #linha #produto #imgprod,
+  #linha #produto #descricao {
+    width: 90%;
+    margin: 10px;
+    transition: ease 0.25s;
+  }
+  main form {
+    width: 90%;
+  }
+}
